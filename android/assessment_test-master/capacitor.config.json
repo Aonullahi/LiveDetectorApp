@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "imageclassifier",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,48 @@
+<div class="parent">
+  <!-- Head -->
+  <div class="flex space-between">
+      <span mat-ripple (click)="back()">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+              <path d="M15.0383 6.87695C14.9728 6.86632 14.9066 6.86142 14.8403 6.86228H3.55262L3.79875 6.7478C4.03933 6.63393 4.2582 6.47895 4.44556 6.28988L7.6109 3.12453C8.02779 2.72658 8.09783 2.08639 7.7769 1.60769C7.40338 1.09757 6.68706 0.986814 6.17691 1.36034C6.1357 1.39053 6.09652 1.42345 6.05971 1.45886L0.335755 7.18282C-0.111572 7.62965 -0.111966 8.35448 0.334861 8.80181C0.335147 8.80209 0.335469 8.80242 0.335755 8.8027L6.05971 14.5267C6.5074 14.9731 7.23223 14.9721 7.6787 14.5244C7.71383 14.4892 7.74663 14.4517 7.7769 14.4122C8.09783 13.9335 8.02779 13.2933 7.6109 12.8953L4.45128 9.72426C4.28332 9.55612 4.09021 9.41513 3.87888 9.30641L3.53545 9.15186H14.7773C15.3621 9.17358 15.8752 8.76507 15.9851 8.19024C16.0863 7.56615 15.6624 6.97819 15.0383 6.87695Z" fill="#62526D" fill-opacity="0.8"/>
+              </g>
+              <defs>
+              <clipPath id="clip0">
+              <rect width="16" height="16" fill="white"/>
+              </clipPath>
+              </defs>
+          </svg>
+      </span>
+      Classifier
+      <span mat-ripple (click)="home()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.8649 10.6217L12.7046 2.27481C12.3025 1.90838 11.6962 1.90842 11.2943 2.27477L2.13388 10.6217C1.81179 10.9152 1.7054 11.3674 1.86276 11.7737C2.02015 12.18 2.40336 12.4425 2.83909 12.4425H4.30216V20.8055C4.30216 21.137 4.57101 21.4059 4.90258 21.4059H9.9236C10.2552 21.4059 10.524 21.1371 10.524 20.8055V15.7278H13.475V20.8055C13.475 21.1371 13.7438 21.4059 14.0754 21.4059H19.0962C19.4277 21.4059 19.6966 21.1371 19.6966 20.8055V12.4425H21.1599C21.5956 12.4425 21.9789 12.18 22.1363 11.7737C22.2934 11.3674 22.187 10.9152 21.8649 10.6217Z" fill="url(#paint0_linear)"/>
+              <path d="M19.5381 3.19861H15.5059L20.1386 7.41101V3.79899C20.1386 3.46742 19.8697 3.19861 19.5381 3.19861Z" fill="url(#paint1_linear)"/>
+              <defs>
+              <linearGradient id="paint0_linear" x1="22.2079" y1="1.99999" x2="1.24099" y2="2.44698" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#732CA4"/>
+              <stop offset="1" stop-color="#8C62A9"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear" x1="20.1386" y1="3.19861" x2="15.3813" y2="3.30462" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#732CA4"/>
+              <stop offset="1" stop-color="#8C62A9"/>
+              </linearGradient>
+              </defs>
+          </svg>
+      </span>
+  </div>
+
+  <!-- Content -->
+  <div class="tabs animate__animated animate__fadeIn">
+      <div class="what">
+          <!-- response -->
+          {{ responseText }}
+      </div>
+      <img [src]="image" alt="" style="width: 50%; height: 60%">
+      <button mat-button *ngIf="!loading" (click)="snapShot()">Try Again</button>
+      <button mat-button *ngIf="loading">
+        Please wait....
+      </button>
+  </div>
+
+</div>

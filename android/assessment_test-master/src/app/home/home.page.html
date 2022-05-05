@@ -1,0 +1,17 @@
+<div class="parent">
+  <!-- Head -->
+  <div class="welcome_user">
+      <div class="welcome">Hello,</div>
+      <div class="user">Great Mind</div>
+  </div>
+  <!-- Content -->
+  <div class="tabs animate__animated animate__fadeIn">
+       <div class="what">
+          What would you like to do?
+       </div>
+       <!-- For loop to display differnt tabs -->
+       <div class="item" mat-ripple *ngFor="let item of items" [style.background]="item?.bgColor" [style.boxShadow]="item?.boxShadow" (click)="screenTo(item?.rout)">
+          {{item?.text}}
+       </div>
+  </div>
+</div>
